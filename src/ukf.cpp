@@ -24,10 +24,10 @@ UKF::UKF() {
   P_ = MatrixXd(5, 5);
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
-  std_a_ = 30;
+  std_a_ = 30; // TODO: Tune this
 
   // Process noise standard deviation yaw acceleration in rad/s^2
-  std_yawdd_ = 30;
+  std_yawdd_ = 30; // TODO: Tune this
 
   // Laser measurement noise standard deviation position1 in m
   std_laspx_ = 0.15;
@@ -80,6 +80,13 @@ void UKF::Prediction(double delta_t) {
   Complete this function! Estimate the object's location. Modify the state
   vector, x_. Predict sigma points, the state, and the state covariance matrix.
   */
+  // Predict state after delta_t
+  
+  // Calculate sigma points for predicted state: see Lesson 7.14
+  
+  // Calculate the state covariance matrix from the predicted sigma points.
+  
+  
 }
 
 /**
