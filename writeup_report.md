@@ -27,7 +27,7 @@ My project includes the following files:
 
 ---
 
-#2. Theory
+# 2. Theory
 
 The unscented kalman filter that is implemented uses a constant turn rate and velocity magnituge model, or CTRV:
 
