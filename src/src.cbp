@@ -35,12 +35,12 @@
 		<Unit filename="json.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="measurement_package.h" />
-		<Unit filename="test.cpp" />
-		<Unit filename="test.h" />
 		<Unit filename="tools.cpp" />
 		<Unit filename="tools.h" />
 		<Unit filename="ukf.cpp" />
 		<Unit filename="ukf.h" />
+		<Unit filename="unit_test1.h" />
+		<Unit filename="unit_test2.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

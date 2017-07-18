@@ -1,0 +1,36 @@
+How to build in Code::Blocks 16:01 on Ubuntu 16.04
+==================================================
+
+First, make sure you can build it with make.
+
+Then, do the following in Code::Blocks
+
+(1) Create a new project, using Console Application
+(2) Add the source & header files from src to the project
+(3) Modify the compiler settings:
+    (a) Settings->Compiler...--> Compiler settings: Compiler Flags
+        (-) Check this option
+        Have g++ follow the C++11 ISO C++ language standard [-std=c++11]
+        
+    (b) Settings->Compiler...--> Linker settings
+        (-) Add these to the Link libraries (see CMakeLists.txt)
+        z
+        ssl
+        uv
+        uWS
+        
+    (c) Settings->Compiler...--> Search directories:Compiler
+        (-) Add these for the Compiler (see CMakeLists.txt)
+        /usr/local/include
+        /usr/local/opt/openssl/include
+        
+    (d) Settings->Compiler...--> Search directories:Linker
+        (-) Add these for the Linker (see CMakeLists.txt)
+        /usr/local/lib
+        /usr/local/opt/openssl/lib
+        /usr/local/Cellar/libuv/1.11.0/lib
+        
+        
+        
+        
+    
