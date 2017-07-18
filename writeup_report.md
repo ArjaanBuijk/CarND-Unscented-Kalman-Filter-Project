@@ -50,7 +50,7 @@ The CTRV model assumes a circular motion with constant velocity and radius. This
 |std\_a_    | Process noise standard deviation longitudinal acceleration in m/s^2|
 |std\_yawdd_| Process noise standard deviation yaw acceleration in rad/s^2|
 
-The object being tracked is a bicycle, and good values for these process noise parameters are expected to be around 1.0, based on a maximum expected acceleration of ~2.0 m/s^2. Several tests were done to determine an optimal choice, and it was validated that the resulting Unscented Kalman Filter is behaving in a consistent manner by plotting the the Normalized Innovation Squared (NIS).
+The object being tracked is a bicycle, and good values for these process noise parameters are expected to be around 1.0, based on a maximum expected acceleration of ~2.0 m/s^2. Several tests were done to determine an optimal choice, and it was validated that the resulting Unscented Kalman Filter is behaving in a consistent manner by plotting the Normalized Innovation Squared (NIS).
 
 
 ---
