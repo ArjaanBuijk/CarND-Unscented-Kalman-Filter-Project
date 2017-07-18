@@ -8,8 +8,8 @@ Unscented Kalman Filter Project.
 
 The goals / steps of this project are the following:
 
-* Implement Lidar and Radar sensor fusion in C++, use an Unscented Kalman filter.
-* Test implementation by tracking a moving object, and optimize setting for process noise.
+* Implement Lidar and Radar sensor fusion in C++, using an Unscented Kalman filter.
+* Test implementation by tracking a moving object, and optimize settings for process noise.
 * Validate implementation by comparing predicted trajectory to provided ground truth trajectory.
 * Compare accuracy to standard Kalman filter for Lidar and Extended Kalman filter for Radar.
 
@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 My project includes the following files:
 
 - [<b>C++</b> - The source code](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/tree/master/src)
-- [<b>writeup_report.md</b> - A summary of the project](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/tree/master/src/writeup_report.md)
+- [<b>writeup_report.md</b> - A summary of the project](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/writeup_report.md)
 - [<b>videoProject.mp4</b> - A video showing prediction (green) compared to sensor data (red=Lidar, blue=Radar)](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/videoProject.mp4)
 
     ![track1](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/videoProject.gif?raw=true)
