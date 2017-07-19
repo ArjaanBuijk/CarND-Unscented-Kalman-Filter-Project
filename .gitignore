@@ -3,3 +3,7 @@
 
 # build files
 build/
+
+# Code::Blocks build files
+bin/
+obj/

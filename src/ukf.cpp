@@ -8,7 +8,7 @@
 // uncomment this if you want to run the unit-tests
 // also uncomment unit_test1.h below
 // do NOT use the unit_tests during an actual run.
-//#include "unit_test2.h"
+#include "unit_test2.h"
 
 using namespace std;
 using Eigen::MatrixXd;
@@ -107,8 +107,14 @@ UKF::UKF(std::ofstream & ofs) : ofs_(ofs)
     weights_(j) = 0.5/(lambda_+n_aug_);
   }
 
+  //measurement covariance matrix - radar
+  R_radar_ = MatrixXd(n_z_radar_,n_z_radar_);
+  R_radar_ <<  std_radr_*std_radr_, 0                      , 0,
+               0                  , std_radphi_*std_radphi_, 0,
+               0                  , 0                      ,std_radrd_*std_radrd_;
+
   //un-comment this if you want to run the unit tests
-  //#include "unit_test1.h"
+  #include "unit_test1.h"
 
   // counter of measurements
   count_=-1;
@@ -409,11 +415,7 @@ void UKF::predict_radar_measurement(MatrixXd& Zsig, VectorXd& z_pred, MatrixXd& 
   }
 
   //add measurement noise covariance matrix
-  MatrixXd R = MatrixXd(n_z_radar_,n_z_radar_);
-  R <<    std_radr_*std_radr_, 0                      , 0,
-          0                  , std_radphi_*std_radphi_, 0,
-          0                  , 0                      ,std_radrd_*std_radrd_;
-  S = S + R;
+  S = S + R_radar_;
 }
 
 /** Lesson 7.29: Update state vector & covariance matrix */

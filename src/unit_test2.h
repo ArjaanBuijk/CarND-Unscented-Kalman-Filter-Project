@@ -225,6 +225,12 @@ bool UKF::test_predict_radar_measurement()
   //radar measurement noise standard deviation radius change in m/s
   std_radrd_ = 0.1;
 
+  // measurement covariance matrix - rada
+  R_radar_ <<  std_radr_*std_radr_, 0                      , 0,
+               0                  , std_radphi_*std_radphi_, 0,
+               0                  , 0                      ,std_radrd_*std_radrd_;
+
+
   //create example matrix with predicted sigma points
   MatrixXd Xsig_pred = MatrixXd(n_x_, 2 * n_aug_ + 1);
   Xsig_pred <<

@@ -62,6 +62,9 @@ public:
   ///* Weights of sigma points
   VectorXd weights_;
 
+  ///* measurement covariance matrix - radar */
+  MatrixXd R_radar_;
+
   ///* State dimension
   int n_x_;
 
