@@ -319,13 +319,13 @@ void UKF::predict_sigma_points(const MatrixXd& Xsig_aug)
 
   for (int j=0; j<Xsig_aug.cols(); ++j){
     //extract values for better readability
-    double p_x      = Xsig_aug(0,j);
-    double p_y      = Xsig_aug(1,j);
-    double v        = Xsig_aug(2,j);
-    double yaw      = Xsig_aug(3,j);
-    double yawd     = Xsig_aug(4,j);
-    double nu_a     = Xsig_aug(5,j);
-    double nu_yawdd = Xsig_aug(6,j);
+    const double p_x      = Xsig_aug(0,j);
+    const double p_y      = Xsig_aug(1,j);
+    const double v        = Xsig_aug(2,j);
+    const double yaw      = Xsig_aug(3,j);
+    const double yawd     = Xsig_aug(4,j);
+    const double nu_a     = Xsig_aug(5,j);
+    const double nu_yawdd = Xsig_aug(6,j);
 
     //predicted state values
     double px_p, py_p;
