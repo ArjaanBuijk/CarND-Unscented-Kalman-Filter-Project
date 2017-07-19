@@ -389,13 +389,13 @@ void UKF::predict_radar_measurement(MatrixXd& Zsig, VectorXd& z_pred, MatrixXd& 
   for (int i = 0; i < 2 * n_aug_ + 1; i++) {  //2n+1 simga points
 
     // extract values for better readibility
-    double p_x = Xsig_pred_(0,i);
-    double p_y = Xsig_pred_(1,i);
-    double v  = Xsig_pred_(2,i);
-    double yaw = Xsig_pred_(3,i);
+    const double p_x = Xsig_pred_(0,i);
+    const double p_y = Xsig_pred_(1,i);
+    const double v  = Xsig_pred_(2,i);
+    const double yaw = Xsig_pred_(3,i);
 
-    double v1 = cos(yaw)*v;
-    double v2 = sin(yaw)*v;
+    const double v1 = cos(yaw)*v;
+    const double v2 = sin(yaw)*v;
 
     // measurement model
     Zsig(0,i) = sqrt(p_x*p_x + p_y*p_y);                        //r
@@ -559,8 +559,8 @@ void UKF::extract_measured_positions(const MeasurementPackage meas_package,
                                      double& px,double& py)
 {
   if (meas_package.sensor_type_ == MeasurementPackage::RADAR) {
-    double r     = meas_package.raw_measurements_[0];
-    double phi   = meas_package.raw_measurements_[1];
+    const double r     = meas_package.raw_measurements_[0];
+    const double phi   = meas_package.raw_measurements_[1];
     //double r_dot = meas_package.raw_measurements_[2];
     //note: vx & vy can not be determined from a radar measurement
     //      only the velocity in the direction of r is known, but that
