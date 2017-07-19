@@ -229,6 +229,13 @@ void UKF::Prediction()
  */
 void UKF::UpdateLidar(MeasurementPackage meas_package)
 {
+  /* NOTE: TODO:
+  We are using Sigma Points here for Lidar Measurement update.
+  However, the measurement model in the LIDAR case is linear.
+  That means that we do not need to use the unscented transformation at all!
+  Using the linear Kalman filter update like in the EKF project should yield
+  the same results with less computation.
+  */
   /** Lesson 7.26: Predict radar measurement at time k+1*/
   //create matrix for sigma points in measurement space [px, py]
   MatrixXd Zsig = MatrixXd(n_z_lidar_, 2 * n_aug_ + 1);
