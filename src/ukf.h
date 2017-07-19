@@ -193,6 +193,9 @@ public:
 
 private:
 
+  ///* small value to avoid divide by zero*/
+  double EPS_ = 1.E-6;
+
   ///* get px & py from the measurement
   void extract_measured_positions(const MeasurementPackage meas_package,
                                   double& px,double& py);
