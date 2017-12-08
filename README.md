@@ -1,8 +1,7 @@
 # Unscented Kalman Filters
 
----
 
-Unscented Kalman Filter Project.
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 ---
 
@@ -20,7 +19,7 @@ The goals / steps of this project are the following:
 My project includes the following files:
 
 - [<b>C++</b> - The source code](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/tree/master/src)
-- [<b>writeup_report.md</b> - A summary of the project](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/writeup_report.md)
+- [<b>README.md</b> - A summary of the project](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/README.md)
 - [<b>videoProject.mp4</b> - A video showing prediction (green) compared to sensor data (red=Lidar, blue=Radar)](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/videoProject.mp4)
 
     ![track1](https://github.com/ArjaanBuijk/CarND-Unscented-Kalman-Filter-Project/blob/master/videoProject.gif?raw=true)
